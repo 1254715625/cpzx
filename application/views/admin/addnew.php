@@ -1,9 +1,4 @@
-<script type="text/javascript" charset="utf-8"
-        src="<?php echo $public_dir; ?>/admin/js/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8"
-        src="<?php echo $public_dir; ?>/admin/js/ueditor/ueditor.all.min.js"></script>
-<script type="text/javascript" charset="utf-8"
-        src="<?php echo $public_dir; ?>/admin/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+
 <link href="<?php echo $public_dir; ?>/admin/js/rili/css/lyz.calendar.css" rel="stylesheet" type="text/css"/>
 <script src="<?php echo $public_dir; ?>/admin/js/rili/js/lyz.calendar.min.js" type="text/javascript"></script>
 <script src="<?php echo $public_dir; ?>/admin/js/caijian/iscroll-zoom.js"></script>
@@ -17,6 +12,12 @@
 <script src="<?php echo $public_dir; ?>/admin/js/file_upload/js/jquery.iframe-transport.js"></script>
 <script src="<?php echo $public_dir; ?>/admin/js/file_upload/js/jquery.fileupload.js"></script>
 <script src="<?php echo $public_dir; ?>/admin/js/file_upload/js/cors/jquery.xdr-transport.js"></script>
+
+
+<script type="text/javascript">window.UEDITOR_HOME_URL="<?php echo $public_dir; ?>/admin/js/ueditor/"; </script>
+<script type="text/javascript" charset="utf-8" src="<?php echo $public_dir; ?>/admin/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo $public_dir; ?>/admin/js/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="<?php echo $public_dir; ?>/admin/js/ueditor/lang/zh-cn/zh-cn.js"></script>
 
 <div class="panel admin-panel">
     <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 新闻添加</strong></div>
@@ -140,6 +141,23 @@
                     <div class="tips"></div>
                 </div>
             </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>文章：</label>
+                </div>
+                <div class="field">
+                    <?php if($content =='') { ?>
+                        <script id="article" name="article" type="text/plain" style="width:100%; height:160px;"></script>
+                    <?php } else{ ?>
+                        <script id="article" name="article" type="text/plain" style="width:100%; height:160px;"><?php echo $info['article'];  ?></script>
+                    <?php } ?>
+
+                </div>
+            </div>
+
+
+
             <div class="form-group">
                 <div class="label">
                     <label>上传视频：</label>
@@ -286,6 +304,13 @@
 </div>
 
 <script type="text/javascript">
+
+    UE.getEditor('article',{
+        //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+        toolbars:[['bold' , 'forecolor' , 'insertimage' , 'link' , 'blockquote' , 'emotion' , '|' ,'上传' ]],
+        elementPathEnabled:false,
+        wordCount:false
+    });
 
     var clipArea = new bjj.PhotoClip("#clipArea", {
         size: [250, 165],

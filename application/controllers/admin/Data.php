@@ -71,9 +71,9 @@ class Data extends Admin_Controller {
 		$title = $_POST['title'];
 		$shorttitle = $_POST['shorttitle'];
 		$type = $_POST['type'];
+		$article = $_POST['article'];
 		$img = $_POST['sslogo'];
 		//$aid = is_numeric($_POST['aid'])?$_POST['aid']:$_POST['aname'];
-
 
 		$source = $_POST['source'];
 		$tag = str_replace('，',',',$_POST['tag']);
@@ -112,6 +112,7 @@ class Data extends Admin_Controller {
 			'img' => $img,
 			'img2' => $img2,
 			'abstract' => $abstract,
+			'article'=>$article,
 			'addtime' => '20'.date('y-m-d H:i'),
 			'newstime' => $newstime,
 			'author' => $aid,

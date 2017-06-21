@@ -42,7 +42,8 @@
 			$this->data['content'] = $data['content'];
 			$this->data['local_time'] = $data['local_time'];
 			$this->data['info'] = $data['info'];
-			$this->data['pre'] = $prenext['pre'];
+			$this->data['article'] = $data['article'];
+            $this->data['pre'] = $prenext['pre'];
 			$this->data['next'] = $prenext['next'];
 			$this->data['web_key'] = $key;
 			$this->data['web_info'] = $info;

@@ -6,8 +6,10 @@
             &nbsp;&nbsp;&nbsp;新闻时间:<?php echo $info['newstime']; ?>
             &nbsp;&nbsp;&nbsp;点击量:<?php echo $info['click']; ?><!--&nbsp;&nbsp;&nbsp;时长:--><?php  //$content['local_time']; ?> </div>
         <div class="g-mnc">
-            <!-- 内容详情 -->
+
             <div class="g-article">
+
+                <!-- 视频详情 -->
                 <div class="m-article ti2em" style="text-align: center">
                     <div class="review">
                         <p><strong><?php echo $info['abstract']; ?></strong></p>
@@ -17,7 +19,7 @@
                     $total = count($cont);
                     $diz = $cont[($total - 1)];
                     if ($content['content'] == '' || !(in_array($diz, ['3gp', 'rmvb', 'flv', 'mp4', 'wmv', 'avi', 'mkv', 'wav']))){ ?>
-                        <p><strong>没有上传视频或格式不对</strong></p>
+                       <!-- <p><strong>没有上传视频或格式不对</strong></p>-->
                     <?php } else{
                     ; ?>
                         <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
@@ -33,6 +35,23 @@
                         </object>
                         <?php }; ?>
                 </div>
+
+
+                <!-- 图片详情 -->
+                <div class="" style="text-align: center">
+                    <?php
+
+                    if ($info['article'] == ''){ ?>
+
+                    <?php } else{ ; ?>
+                        <div style="height: 80%;width: 80%;"><?php echo $info['article']; ?></div>
+                    <?php }; ?>
+                </div>
+
+
+
+
+
 
                 <div style="position:relative;margin-left:82%;width:140px;height:40px;">
                     <div

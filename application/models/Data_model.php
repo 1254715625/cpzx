@@ -287,7 +287,7 @@ class Data_model extends CI_Model
     //获取新闻内容
     public function get_content($id){
 
-        $query = $this->db->query( "select id,title,abstract,newstime,click,source from tx_news where id = ".$id);
+        $query = $this->db->query( "select id,title,abstract,newstime,click,article,source from tx_news where id = ".$id);
         $data['info'] = $query->result_array()[0];
 
         $query = $this->db->query( "select content ,local_time from tx_news_content where id = ".$id);

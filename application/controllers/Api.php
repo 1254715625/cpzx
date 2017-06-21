@@ -114,12 +114,13 @@ class Api extends MY_Controller
         if($id ==''){
             $id = $_GET['id'];
         }
-        $page = $_GET['page'] ? $_GET['page'] : 1;
+
         if (!$id) {
 
             $status = $_GET['status'];
             $date = $_GET['date'];
             $keywords = $_GET['keywords'];
+            $page = $_GET['page'] ? $_GET['page'] : 1;
             $size = $_GET['size'] ? $_GET['size'] : 10;
 
             $getdata = $this->data_model;
