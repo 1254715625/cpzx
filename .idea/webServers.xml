@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7477068d-c7e9-498d-8712-2061136052e6" name="app视频站" url="http://118.89.233.35">
+        <fileTransfer host="118.89.233.35" port="21" password="df9bdf98df99df9edf9fdf9c" username="yu">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
