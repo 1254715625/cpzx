@@ -256,6 +256,14 @@ class Data_model extends CI_Model
         return $data;
     }
 
+    //改造版图集信息
+    function get_allimg_new(){
+
+        $query = $this->db->query( "select * from tx_img where status != 2 order by addtime desc ");
+        $data['data'] = $query->result_array();
+        return $data;
+    }
+
     //获取彩票咨询信息
     function get_cpzx(){
 

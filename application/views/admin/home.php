@@ -37,7 +37,7 @@
             <li><a href="<?php echo $url_dir;?>/admin/home/addimg" target="right"><span class="icon-caret-right"></span>添加图集</a></li>
             <li><a href="<?php echo $url_dir;?>/admin/home/addnew" target="right"><span class="icon-caret-right"></span>新闻添加</a></li>
             <li><a href="<?php echo $url_dir;?>/admin/home/content_manage" target="right"><span class="icon-caret-right"></span>新闻管理</a></li>
-            <li><a href="<?php echo $url_dir;?>/admin/home/img_manage" target="right"><span class="icon-caret-right"></span>图集管理</a></li>
+            <li><a href="<?php echo $url_dir;?>/admin/home/img_manage" target="right"><span class="icon-caret-right"></span>美女图集</a></li>
             <li><a href="<?php echo $url_dir;?>/admin/home/adv" target="right"><span class="icon-caret-right"></span>首页轮播</a></li>
 			<li><a href="<?php echo $url_dir;?>/admin/home/ad" target="right"><span class="icon-caret-right"></span>广告管理</a></li>
             <li><a href="<?php echo $url_dir;?>/admin/home/f_link" target="right"><span class="icon-caret-right"></span>链接管理</a></li>

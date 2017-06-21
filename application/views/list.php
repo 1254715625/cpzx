@@ -2,7 +2,7 @@
 <div class="mainwd2 mt10 bo1">
 <!--leftmainB-->
 	<div class="left w800p">
-		<div class="hlrmtj-content" id="mainList"> 
+		<div class="hlrmtj-content" id="mainList">
           <ul>
           <?php foreach($news as $val){ ;?>
 			<li class="<?php echo $val['img']?'rtmj-box':'rtmj-box2';?>">
@@ -21,7 +21,7 @@
            </ul>
 		   <!--页页码-->
 		   <?php echo $fenye;?>
-		   <!--页码E-->       
+		   <!--页码E-->
           </div>
 	</div>
 <!--leftmainE-->

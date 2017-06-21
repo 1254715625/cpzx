@@ -24,6 +24,22 @@
 			$this->loadview('list',$this->data);
 		}
 
+        //美女图集
+        public function meinv(){
+            $size = $this->uri->segment(4)?$this->uri->segment(4):1;
+            $news=$this->data_model->get_allimg_new();
+            $query=$this->db->query("select count(*) as total from tx_img ");
+            $num = $query->result_array()[0]['total'];
+            $total = ceil($num / $size);
+            $fenye = qfenye($size,10,$total,$this->data['url_dir'].'/pic/index/');
+            $this->data['news'] = $news['data'];
+            $this->data['fenye'] = $fenye;
+
+            $this->loadview('meinv',$this->data);
+
+        }
+
+
 		public function content(){
 
 			$id=$this->uri->segment(3);
@@ -93,6 +109,10 @@
 			}
 			echo $msg;
 		}
+
+
+
+
 
 	}
  ?>
