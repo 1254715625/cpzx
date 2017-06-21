@@ -3,7 +3,7 @@
 
 
 <div class="panel admin-panel">
-  <div class="panel-head"><strong class="icon-reorder"> 图集管理</strong> <a href=""
+  <div class="panel-head"><strong class="icon-reorder"> 美女图集</strong> <a href=""
                                                                          style="float:right; display:none;">添加字段</a>
   </div>
   <form method="get" action="<?php echo $url_dir; ?>/admin/home/img_manage" enctype="multipart/form-data">

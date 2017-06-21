@@ -81,6 +81,7 @@ class Home extends Admin_Controller {
 		$arr[1]=$status[0];
 		$arr[2]=$status[2];
 		$arr[3]=$status[3];
+		$arr[4]=$status[4];
 		$status=$arr;
 		
 		$this->data['type'] = $type;

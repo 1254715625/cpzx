@@ -25,7 +25,7 @@ class Base_Controller  extends CI_Controller{
 		$ad = $getdata->get_ad();
         $f_link=$getdata->get_f_link_all();
 
-        $rightnewinfo = $getdata->get_allnews('where status != 0 order by newstime desc limit 10');
+        $rightnewinfo = $getdata->get_allnews('where status != 0 order by status desc,newstime desc limit 10');
         $day = $getdata->get_allnews('where status != 0 and to_days(addtime) = to_days(now()) limit 6');
         $week = $getdata->get_allnews('where status != 0 and DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date(addtime) limit 6');
         $incd = $getdata->get_allnews('where status != 0 and typeid = 9 ORDER BY RAND() limit 6');
