@@ -67,6 +67,7 @@ var amcolum = {
                     $('input[name="sort"]').val(data[0]['sort']);
                     $('input[name="key"]').val(data[0]['key']);
                     $('input[name="info"]').val(data[0]['info']);
+                    //$('input[name="recomend"]').val(data[0]['recomend']);
                     $('.active').removeClass('active');
                     $('input[name="status"]:eq('+(data[0]['status'])+')').parents('label').addClass('active');
                     $('input[name="status"]:eq('+(data[0]['status'])+')').prop('checked',true);

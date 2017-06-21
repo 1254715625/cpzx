@@ -305,11 +305,25 @@
 
 <script type="text/javascript">
 
-    UE.getEditor('article',{
-        //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
-        toolbars:[['bold' , 'forecolor' , 'insertimage' , 'link' , 'blockquote' , 'emotion' , '|' ,'上传' ]],
-        elementPathEnabled:false,
-        wordCount:false
+    var ue = UE.getEditor('article', {
+        toolbars: [
+            [ 'source', '|', 'undo', 'redo', '|',
+                'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+                'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+                'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+                'directionalityltr', 'directionalityrtl', 'indent', '|',
+                'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+                'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+                'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', 'background', '|',
+                'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+                'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+                'print', 'preview', 'searchreplace', 'drafts', 'help']
+        ],
+        autoHeightEnabled: true,
+        autoFloatEnabled: true
+    });
+    ue.ready(function() {
+        //ue.setContent('<?php echo $content;?>');
     });
 
     var clipArea = new bjj.PhotoClip("#clipArea", {

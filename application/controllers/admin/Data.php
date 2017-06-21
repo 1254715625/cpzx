@@ -360,7 +360,7 @@ function image_create_from_ext($imgfile)
 			'sort' => $sort,
 			'key' => $key,
 			'info' => $info,
-			'status' => $status
+			'status' => $status,
 		);
 
 		if($id){
