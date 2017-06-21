@@ -76,7 +76,7 @@ class Api extends MY_Controller
                 'foot' => $addes
             );
 
-        } else {
+        } else { //默认获取所有的新闻
             $query = $this->db->query($sql);
         }
 

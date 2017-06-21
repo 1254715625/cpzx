@@ -154,7 +154,7 @@
 
                         <input type="file" name="files" class="upinput" param1="xxx"/>
                         <input type="hidden" name="local_time" value="" class="param1">
-                        <input type="hidden" name="param2" value="yyy" class="param2">
+                        <input type="hidden" name="param2" value="<?php echo $content; ?>" class="param2">
 
                     </div>
                     <!-- 上传进度条及状态： -->

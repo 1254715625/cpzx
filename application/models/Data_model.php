@@ -413,7 +413,8 @@ class Data_model extends CI_Model
 
     //新闻内容更新
     public function update_newcontent($data,$id){
-        $this->db->where('listid', $id);
+       // $this->db->where('listid', $id);
+        $this->db->where('id', $id); //根据id进行更新
         $data = $this->db->update('tx_news_content', $data);
 
         return $data;
