@@ -28,9 +28,7 @@
         <div style="float: none;" class="field">
           <input type="text" id="url1" name="sslogo"  class="input tips" style="width:25%; float:left;" value="<?php echo $info['img'];?>" data-toggle="hover" data-place="right" data-image="<?php echo $url_dir.$info['img'];?>"  />
           <input type="file" name="slogo" class="button bg-blue margin-left" id="image1" value="游览" >
-          <a class="button bg-blue margin-left" style="display: none;" id="clipBtn">裁剪上传</a>
         </div>
-        <div id="clipArea" style="height: 150px;width: 270px; margin:10px 0 10px 110px;display: none;"></div>
       </div>
       <div class="form-group">
         <div class="label">
@@ -91,41 +89,7 @@
 
 <script type="text/javascript">
 
-var clipArea = new bjj.PhotoClip("#clipArea", {
-    size: [100, 120],
-    outputSize: [150, 270],
-    file: "#image1",
-    view: "#view",
-    ok: "#clipBtn",
-    loadStart: function() {
-      console.log("照片读取中");
-    },
-    loadComplete: function() {
-      $('#clipArea').show();
-      $('#clipBtn').show();
-    },
-    clipFinish: function(dataURL) {
-      if(dataURL){
-        var data = {
-          base : dataURL
-        }
-        $.post('<?php echo $url_dir;?>/admin/data/uploadbase',data,function(r){
-          console.log(r);
-          if(r == 1){
-            layer.alert('上传失败！');
-          }else{
-            layer.alert('上传成功！');
-            $('#clipArea').hide();
-            $('#clipBtn').hide();
-            $('#url1').val(r);
-            $('#url1').attr('data-image','<?php echo $url_dir;?>'+r);
-          }
-        })
-      }
-    }
-  });
-
-
+  
   //插件上传图片
   $('#test').diyUpload({
     url:'<?php echo $public_dir;?>/admin/js/imgup/server/fileupload.php',

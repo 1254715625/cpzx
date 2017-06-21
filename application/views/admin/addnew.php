@@ -117,9 +117,8 @@
                            value="<?php echo $info['img']; ?>" data-toggle="hover" data-place="right"
                            data-image="<?php echo $url_dir . $info['img']; ?>"/>
                     <input type="file" name="slogo" class="button bg-blue margin-left" id="image1" value="游览">
-                    <a class="button bg-blue margin-left" style="display: none;" id="clipBtn">裁剪上传</a>
                 </div>
-                <div id="clipArea" style="height: 200px;width: 300px; margin:10px 0 10px 110px;display: none;"></div>
+
             </div>
             <div class="form-group">
                 <div class="label">
@@ -324,42 +323,6 @@
     });
     ue.ready(function() {
         //ue.setContent('<?php echo $content;?>');
-    });
-
-    var clipArea = new bjj.PhotoClip("#clipArea", {
-        size: [250, 165],
-        outputSize: [300, 200],
-        file: "#image1",
-        view: "#view",
-        ok: "#clipBtn",
-        loadStart: function () {
-            console.log("照片读取中");
-        },
-        loadComplete: function () {
-            $('#clipArea').show();
-            $('#clipBtn').show();
-        },
-        clipFinish: function (dataURL) {
-            if (dataURL) {
-                var data = {
-                    base: dataURL
-                };
-
-                $.post('<?php echo $url_dir;?>/admin/data/uploadbase', data, function (r) {
-
-                    if (r == 1) {
-                        layer.alert('上传失败！');
-                    } else {
-                        layer.alert('上传成功！');
-                        $('#clipArea').hide();
-                        $('#clipBtn').hide();
-                        $('#url1').val(r);
-                        $('#url1').attr('data-image', '<?php echo $url_dir;?>' + r);
-                    }
-                })
-
-            }
-        }
     });
 
 

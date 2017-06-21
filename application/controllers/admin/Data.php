@@ -72,9 +72,12 @@ class Data extends Admin_Controller {
 		$shorttitle = $_POST['shorttitle'];
 		$type = $_POST['type'];
 		$article = $_POST['article'];
-		$img = $_POST['sslogo'];
 		//$aid = is_numeric($_POST['aid'])?$_POST['aid']:$_POST['aname'];
-
+        if($_FILES['slogo']['name']){
+            $img = ImageUpload($_FILES['slogo'],'a/'.date('ymd'));
+        }else{
+            $img=$_POST['sslogo'];
+        }
 		$source = $_POST['source'];
 		$tag = str_replace('，',',',$_POST['tag']);
 		$abstract = $_POST['abstract'];
@@ -244,13 +247,16 @@ function image_create_from_ext($imgfile)
 		$title = $_POST['title'];
 		$status = $_POST['status']?$_POST['status']:0;
 		$url = $_POST['url'];
-		$img = $_POST['sslogo'];
 
 		$getdata = $this->data_model;
 
 		if(!$title||!count($url)>0||!is_numeric($status))showmsg($_SERVER['HTTP_REFERER'],'信息不能为空！');
 
-
+        if($_FILES['slogo']['name']){
+            $img = ImageUpload($_FILES['slogo'],'a/'.date('ymd'));
+        }else{
+            $img=$_POST['sslogo'];
+        }
 		$data = array(
 			'title' => $title,
 			'img' => $img,
