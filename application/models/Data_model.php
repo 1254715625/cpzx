@@ -438,7 +438,8 @@ class Data_model extends CI_Model
 
     //图集内容更新
     public function update_imgcontent($data,$id){
-        $this->db->where('listid', $id);
+        //$this->db->where('listid', $id);
+        $this->db->where('id', $id);
         $data = $this->db->update('tx_img_content', $data);
 
         return $data;

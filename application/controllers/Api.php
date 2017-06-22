@@ -277,5 +277,30 @@ class Api extends MY_Controller
         echo json_encode($arr);
     }
 
+    public function search(){
+
+        $keyword = $_GET['keyword'];
+        $page = $_GET['page']?$_GET['page']:1;
+
+        if(strlen($keyword)<1){
+            showmsg($_SERVER['HTTP_REFERER'],'字符数不能小于2个字符');
+        }
+
+        $news=$this->data_model->get_search($keyword,$page,'search');
+
+        foreach($news['data'] as $key=>$val){
+            $news['data'][$key]['title'] = str_replace($keyword,'<span style="color:red;font-weight:900;">'.$keyword.'</span>',$val['title']);
+        }
+
+        $fenye = sfenye($page,10,$news['num'],$this->data['url_dir'].'/search/index?keyword='.$keyword);
+
+        $this->da['keyword'] = $keyword;
+        $this->da['status']=1;
+        $this->da['result'] = $news['data'];
+        //$this->da['fenye'] = $fenye;
+
+        echo json_encode($this->da);
+    }
+
 
 }

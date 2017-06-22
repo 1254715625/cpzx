@@ -117,7 +117,7 @@
 				<p>搞笑典籍 | Funny books</p>
 			</div>
 			<div class="w100p"></div>
-		</div>		
+		</div>
 		<!--彩票资讯E-->
 
 </div>

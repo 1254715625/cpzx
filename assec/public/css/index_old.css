@@ -2,7 +2,7 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
 
 fieldset,img{border:0;}
-address,caption,cite,code,dfn,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
 del,ins{text-decoration:none;}
 li{list-style:none;}
 ul,li {list-style:none;}
@@ -10,7 +10,7 @@ caption,th{text-align:left;}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
 q:before,q:after{content:'';}
 abbr,acronym{border:0;font-variant:normal;}
-sup{vertical-align:baseline;}   
+sup{vertical-align:baseline;}
 sub{vertical-align:baseline;}
 legend{color:#000;}
 a{ text-decoration:none; }
@@ -20,6 +20,7 @@ header,nav,section,article,footer,figure{ margin:0px; padding:0px; display:block
 .clear{clear:both;}
 .left{ float:left;}
 .right{ float:right;}
+
 
 body{ margin:0; padding:0; font-family:"微软雅黑";}
 .bg_con{ background: url(../img/tbg.png) no-repeat top center;}
@@ -65,11 +66,11 @@ body{ margin:0; padding:0; font-family:"微软雅黑";}
 #main-content-l-banner {width: 100%;height: 326px;}
 .clearfix {zoom: 1;}
 .banner-l, .banner-r-t, .banner-r-b {float: left;position: relative;}
-.banner-l .mask-l, .banner-l {width: 578px;height: 326px;border-right:1px solid #eee;}
+.banner-l .mask-l, .banner-l {width: 582px;height: 326px;}
 .mask-l, .mask-r-t, .mask-r-b {display: inline-block;position: absolute;left: 0;top: 0;z-index: 111;opacity: 0.9;filter: alpha(opacity=90);}
-#img-l {width: 578px;height: 326px;}
-.zt-size-b {display: inline-block;width: 100%;height: 48px;text-align: center;color: #fff;font: 24px/60px "Arial","Microsoft YaHei";position: absolute;bottom: 30px;left: 0;text-shadow: 1px 1px 1px #000;filter: glow(color=black,strength=1);}
-.banner-r-t {width: 287px;height: 163px;border-bottom:1px solid #eee;}
+#img-l {width: 582px;height: 326px;}
+.zt-size-b {display: inline-block;width: 100%;height: 48px;text-align: center;color: #fff;font: 28px/60px "Arial","Microsoft YaHei";position: absolute;bottom: 30px;left: 0;text-shadow: 1px 1px 1px #000;filter: glow(color=black,strength=1);}
+.banner-r-t {width: 287px;height: 163px;}
 .banner-r-t, .banner-r-b {right: 0;margin-left: 1px;}
 #img-r-t {width: 287px;height: 163px;}
 .zt-size {height: 48px;display: block;width: 275px;word-break: keep-all;overflow: hidden;text-overflow: ellipsis; white-space: nowrap;color: #fff;font: 16px/48px "Arial","Microsoft YaHei"; text-shadow: 1px 1px 1px #000; filter: glow(color=black,strength=1);position: absolute;bottom: 0; left: 10px;}
@@ -161,10 +162,10 @@ a { text-decoration: none;}
 .xiaoxi-t{display:inline-block;font: 12px/16px "微软雅黑";padding-top: 7px;color:#333;width:200px;text-align: center;text-decoration:none;}
 .fs333 li a{ color:#333;}
 .fs333 li a:hover{ color:#FF6600;}
-.xiaoxi-st{display:inline-block;font: 12px/16px "微软雅黑";padding-top: 7px;color:#333;width:100px;text-align: center;text-decoration:none;}
 
 
-.cpzxs ul li i {background-color: #C0C0C0;color: #FFFFFF;display: inline-block; font-size: 12px;font-style: normal; padding-top:2px;height: 14px;line-height: 12px;margin-right: 5px;text-align: center; vertical-align: middle;width:46px;}
+
+.cpzxs ul li i {background-color: #C0C0C0;color: #FFFFFF;display: inline-block; font-size: 12px;font-style: normal; padding-top:2px;height: 14px;line-height: 12px;margin-right: 5px;text-align: center; vertical-align: middle;width:50px;}
 .cpzxs ul li i.num1 { background-color: #f86866;}
 .cpzxs ul li i.num2 { background-color: #c8c064;}
 .cpzxs ul li i.num3 { background-color: #f7975e;}
@@ -173,8 +174,8 @@ a { text-decoration: none;}
 .cpzxs ul li i.num6 { background-color: #f86866;}
 
 .w100p{ width:100%; height:auto; overflow:hidden;}
-.important-t-list0 {padding: 10px 10px;overflow: hidden; width:46%; height: 204px;}
-.important-t-list0 li {padding-left: 12px;display: inline-block;float: left;}
+.important-t-list0 {padding: 10px 10px;overflow: hidden; width:46%}
+.important-t-list0 li {padding-left: 12px;display: inline-block;width: 100%;float: left;}
 .important-t-list0 li a {font: 16px/28px "微软雅黑";color: #000;}
 .important-t-list0 li a:hover {font: 16px/28px "微软雅黑";color: #f60;}
 
@@ -214,8 +215,8 @@ a { text-decoration: none;}
 .mt20p{ margin-bottom:20px;}
 
 
-.nav-anchor { color:#333;display: inline-block;}
-.nav-anchor a {font-size: 1em;color: #333 !important;}
+.nav-anchor { color:#999;display: inline-block;}
+.nav-anchor a, span {font-size: 1em;color: #999;}
 
 .hlrmtj-content {
     width: 790px;
@@ -224,7 +225,7 @@ a { text-decoration: none;}
     padding-top: 15px;
 }
 .rtmj-box {width: 820px;height: auto;overflow: hidden;text-align: left; margin-bottom: 20px;border-bottom: 1px #E5E5E5 solid;padding-bottom: 20px;}
-.rtmj-box dt {  width: 250px;height: 140px;overflow: hidden;float: left; margin-right: 25px; margin-left:15px;margin-top:4px;}
+.rtmj-box dt {  width: 250px;height: 165px;overflow: hidden;float: left; margin-right: 25px; margin-left:15px;}
 .rtmj-box dl h3 a { color:#333;}
 .rtmj-box dl h3 a:hover { color:#c60;}
 .rtmj-box dd {width: 500px; height: 165px;overflow: hidden; float: left;}
@@ -259,12 +260,11 @@ a { text-decoration: none;}
 
 .title { font-size:30px; font-weight:bold; color:#000; margin:20px 20px 0px 20px;text-align: center;}
 .m-info{ text-align:center; color:#999; font-size:14px; margin:10px;}
-
-.m-article {line-height: 31px;width: 96%;overflow: hidden;}
-.m-article .review { background: #ebebeb; padding: 10px;}
-.m-article .review p { margin-top: -5px; margin-bottom: 0;line-height: 24px;text-indent: 0;}
+.m-article {font-size: 16px;color: #333;line-height: 31px;width: 96%;overflow: hidden;}
+.m-article .review { background: #ebebeb; padding: 10px; font-size: 16px;}
+.m-article .review p { margin-top: -5px; margin-bottom: 0;line-height: 24px; color: #666; text-indent: 0;}
 .m-article p, .m-article center {margin: 20px 0;letter-spacing: 0.2px; text-align: left; width: 100%; overflow: hidden;}
-.m-article .review p { margin-top: -5px; margin-bottom: 0; line-height: 24px;text-indent: 0;}
+.m-article .review p { margin-top: -5px; margin-bottom: 0; line-height: 24px;color: #666;text-indent: 0;}
 
 .ti2em p{text-indent: 2em;  width:96%; margin-left:30px;}
 .ti2em p img{ text-align: center; width:90%;}
@@ -340,14 +340,7 @@ a { text-decoration: none;}
     border-radius: 20px;
     padding: 0 8px !important;
 }
-.tag{
-    margin: 0 5px;
-    color:#999 !important;
-}
-.tag:hover{
-    background: #fff !important;
-    color:red !important;
-}
+
 
 
 
