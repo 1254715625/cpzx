@@ -224,15 +224,14 @@ class Api extends MY_Controller
         }
         $arr= array(
             'msg' => $msg,
-            'status' => $status
         );
 
         $re = array(
-            'status' => 1,
-            'msg' => '返回成功',
+            'status' => $status,
+            'msg' => $msg,
             'num'=>null,
             'total'=>null,
-            'res' => $arr,
+            'res' => '',
         );
 
         echo json_encode($re);
