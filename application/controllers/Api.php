@@ -45,7 +45,7 @@ class Api extends MY_Controller
             $query = $this->db->query($sql . " and b.id =" . $type_id . " limit " . (($page - 1) * $size) . " , " . $size);
 
         } elseif ($id) {   //获取具体新闻
-
+            $this->db->query("update tx_news set click = click + 1 where id= " .$id);
             $getdata = $this->data_model;
             $arr = $getdata->get_vote($id);
             foreach ($arr as $val) {
