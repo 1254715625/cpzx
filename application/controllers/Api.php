@@ -25,7 +25,7 @@ class Api extends MY_Controller
         $page = $_GET['page'] ? $_GET['page'] : 1;
         $size = $_GET['size'] ? $_GET['size'] : 10;
 
-        $sql = "select a.id,a.img ,a.title,a.shorttitle,a.click,a.newstime,c.content,c.local_time from tx_news as a,tx_news_type as b ,tx_news_content as c ,tx_news_status as d where a.typeid=b.id  and a.status = d.id";
+        $sql = "select a.id,a.img ,a.title,a.shorttitle,a.click,a.newstime,c.content,c.local_time from tx_news as a,tx_news_type as b ,tx_news_content as c ,tx_news_status as d where a.typeid=b.id and  a.id=c.id  and a.status = d.id";
 
         $cou = "select count(*) as total from tx_news as a,tx_news_type as b ,tx_news_content as c ,tx_news_status as d where a.typeid=b.id and a.id=c.id and a.status = d.id";
 

@@ -44,7 +44,7 @@
                     if ($info['article'] == ''){ ?>
 
                     <?php } else{ ; ?>
-                        <div style="height: 80%;width: 80%;"><?php echo $info['article']; ?></div>
+                        <?php echo $info['article']; ?>
                     <?php }; ?>
                 </div>
 
