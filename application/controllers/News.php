@@ -27,13 +27,12 @@
         //美女图集
         public function meinv(){
 
-            $size = $this->uri->segment(3)?$this->uri->segment(3):1;
+            $page = $this->uri->segment(3)?$this->uri->segment(3):1;
             $query=$this->db->query("select count(*) as total from tx_img ");
-			$news=$this->data_model->get_allimg_new();
-
+			$news=$this->data_model->get_allimg_new($page);
             $num = $query->result_array()[0]['total'];
-            $total = ceil($num / $size);
-            $fenye = qfenye($size,2,$total,$this->data['url_dir'].'/News/meinv');
+            $total = ceil($num / $page);
+            $fenye = qfenye($page,10,$total,$this->data['url_dir'].'/News/meinv');
             $this->data['news'] = $news['data'];
             $this->data['fenye'] = $fenye;
 

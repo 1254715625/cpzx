@@ -25,7 +25,7 @@ class Api extends MY_Controller
         $page = $_GET['page'] ? $_GET['page'] : 1;
         $size = $_GET['size'] ? $_GET['size'] : 10;
 
-        $sql = "select a.id,a.img ,a.title,a.shorttitle,a.click,a.newstime,c.content,c.local_time from tx_news as a,tx_news_type as b ,tx_news_content as c ,tx_news_status as d where a.typeid=b.id and a.id=c.id and a.status = d.id";
+        $sql = "select a.id,a.img ,a.title,a.shorttitle,a.click,a.newstime,c.content,c.local_time from tx_news as a,tx_news_type as b ,tx_news_content as c ,tx_news_status as d where a.typeid=b.id  and a.status = d.id";
 
         $cou = "select count(*) as total from tx_news as a,tx_news_type as b ,tx_news_content as c ,tx_news_status as d where a.typeid=b.id and a.id=c.id and a.status = d.id";
 
@@ -86,11 +86,11 @@ class Api extends MY_Controller
 
         if ($results) {
             $res = array(
-                'mes' => '返回成功',
+                'msg' => '返回成功',
                 'status' => 1,
                 'num' => $num,
                 'total' => $total,
-                'result' => $results
+                'res' => $results
             );
         }
 
@@ -144,7 +144,7 @@ class Api extends MY_Controller
                 'msg' => '返回成功',
                 'num'=>$imginfo['num'],
                 'total'=>$total,
-                'result' => $da,
+                'res' => $da,
             );
 
         } else {
@@ -157,12 +157,21 @@ class Api extends MY_Controller
             $this->da['pre'] = $prenext['pre'];
             $this->da['next'] = $prenext['next'];
 
-            $arr = array(
+            $a = array(
                 'info' => $info,
                 'content' => json_decode($content),
                 'pre' => $prenext['pre'],
                 'next' => $prenext['next'],
             );
+
+            $arr = array(
+                'status' => 1,
+                'msg' => '返回成功',
+                'num'=>1,
+                'total'=>1,
+                'res' => $a,
+            );
+
         }
 
         echo json_encode($arr);
@@ -213,12 +222,20 @@ class Api extends MY_Controller
                 $status = 0;
             }
         }
-        $res = array(
+        $arr= array(
             'msg' => $msg,
             'status' => $status
         );
 
-        echo json_encode($res);
+        $re = array(
+            'status' => 1,
+            'msg' => '返回成功',
+            'num'=>null,
+            'total'=>null,
+            'res' => $arr,
+        );
+
+        echo json_encode($re);
     }
 
 
@@ -265,11 +282,17 @@ class Api extends MY_Controller
                 'res' => $week
             );
         } else {
-            $query = $this->db->query("select id, name from  tx_news_type");
+
+            $listnum = $this->db->query("select count(*) as total   from  tx_news_type ");
+            $num = $listnum->result_array()[0]['total'];
+            $total=ceil($num/$size);
+            $query = $this->db->query("select id, name from  tx_news_type limit " .(($page-1)*$size).",".$size);
             $result = $query->result_array();
             $arr = array(
                 'status' => 1,
                 'msg' => '返回成功',
+                'num'=>$num,
+                'total'=>$total,
                 'res' => $result
             );
         }
@@ -292,14 +315,21 @@ class Api extends MY_Controller
             $news['data'][$key]['title'] = str_replace($keyword,'<span style="color:red;font-weight:900;">'.$keyword.'</span>',$val['title']);
         }
 
-        $fenye = sfenye($page,10,$news['num'],$this->data['url_dir'].'/search/index?keyword='.$keyword);
+       // $fenye = sfenye($page,10,$news['num'],$this->data['url_dir'].'/search/index?keyword='.$keyword);
+       // $this->da['status']=1;
+       // $this->da['result'] = $news['data'];
 
-        $this->da['keyword'] = $keyword;
-        $this->da['status']=1;
-        $this->da['result'] = $news['data'];
-        //$this->da['fenye'] = $fenye;
+        $arr = array(
+            'status' => 1,
+            'msg' => '返回成功',
+            'num'=>$news['num'],
+            'total'=>$news['total'],
+            'res' =>$news['data']
+        );
 
-        echo json_encode($this->da);
+
+
+        echo json_encode($arr);
     }
 
 

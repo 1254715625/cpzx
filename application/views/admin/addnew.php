@@ -1,4 +1,4 @@
-
+<httpRuntime executionTimeout="90" maxRequestLength="2091151" useFullyQualifiedRedirectUrl="false" minFreeThreads="8" minLocalRequestFreeThreads="4" appRequestQueueLimit="100"/>
 <link href="<?php echo $public_dir; ?>/admin/js/rili/css/lyz.calendar.css" rel="stylesheet" type="text/css"/>
 <script src="<?php echo $public_dir; ?>/admin/js/rili/js/lyz.calendar.min.js" type="text/javascript"></script>
 <script src="<?php echo $public_dir; ?>/admin/js/caijian/iscroll-zoom.js"></script>

@@ -257,9 +257,9 @@ class Data_model extends CI_Model
     }
 
     //改造版图集信息
-    function get_allimg_new(){
+    function get_allimg_new($page){
 
-        $query = $this->db->query( "select * from tx_img where status != 2 order by addtime desc ");
+        $query = $this->db->query( "select * from tx_img where status != 2 order by addtime desc limit ".(($page-1)*10).",10");
         $data['data'] = $query->result_array();
         return $data;
     }
@@ -345,9 +345,11 @@ class Data_model extends CI_Model
     }
 
     //搜索信息
-    public function get_search($keywords,$page,$type='search'){
+    public function get_search($keywords,$page,$type='search',$size=''){
         $addsql = 'status != 0';
-
+        if($size == ''){
+            $size = $_GET['size'] ? $_GET['size'] : 10;
+        }
         if($keywords && $type=='search'){
             $addsql .= ' and title like "%'.$keywords.'%"';
         }else if($keywords && $type=='tag'){
@@ -357,8 +359,13 @@ class Data_model extends CI_Model
         $query = $this->db->query( "select count(*) as dd from tx_news where ".$addsql);
         $data['num'] = $query->result_array()[0]['dd'];
 
-        $query = $this->db->query( "select * from tx_news where ".$addsql." order by id desc limit ".(($page-1)*10).",10");
+        //返回总页码
+        $data['total']=ceil($data['num']/$size);
+
+
+        $query = $this->db->query( "select * from tx_news where ".$addsql." order by id desc limit ".(($page-1)*$size).",".$size);
         $data['data'] = $query->result_array();
+
 
         return $data;
     }

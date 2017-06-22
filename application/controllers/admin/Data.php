@@ -97,7 +97,7 @@ class Data extends Admin_Controller {
 
 		$getdata = $this->data_model;
 
-		if(!$title||!$aid||!$type||!$abstract||!$content||!is_numeric($status)||!$newstime)showmsg($_SERVER['HTTP_REFERER'],'信息不能为空！');
+		if(!$title||!$aid||!$type||!$abstract||!is_numeric($status)||!$newstime)showmsg($_SERVER['HTTP_REFERER'],'信息不能为空！');
 
 
 		if($_FILES['slogo2']['name']){

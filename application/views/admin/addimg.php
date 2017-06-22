@@ -89,7 +89,7 @@
 
 <script type="text/javascript">
 
-
+  
   //插件上传图片
   $('#test').diyUpload({
     url:'<?php echo $public_dir;?>/admin/js/imgup/server/fileupload.php',
