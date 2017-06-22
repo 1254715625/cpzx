@@ -7,9 +7,9 @@ class Api extends MY_Controller
 
     //首页返回类型内容
     /**
-     * @param string $status 1普通新闻  3轮播新闻
+     * @param string $status    1普通新闻  3轮播新闻
      * @param string $type_id   获取新闻分类  如1欢乐精选
-     * @param string $id      获取具体的新闻
+     * @param string $id        获取具体的新闻
      *
      *
      *
@@ -102,10 +102,10 @@ class Api extends MY_Controller
     //美女图片
 
     /**
-     * @param $id 美女id，获取具体的图片内容
-     * 如果不传id，默认为获取分页图片
-     * @param $num 美女id， 总数
-     * @param $total        总页码
+     * @param $id      美女id，获取具体的图片内容
+     * 如果不传id，     默认为获取分页图片
+     * @param $num     美女id， 总数
+     * @param $total   总页码
      */
     public function img($id = '')
     {
@@ -180,8 +180,8 @@ class Api extends MY_Controller
 
     /**
      * 点赞处理
-     * @param $id  当前对象ID
-     * @param $status 0:踩  1:赞
+     * @param $id      当前对象ID
+     * @param $status  0:踩  1:赞
      */
     public function zan($id = '', $status = '')
     {
@@ -243,9 +243,9 @@ class Api extends MY_Controller
 
     //其他信息
     /**
-     * 默认 返回所有分类
-     * @param $day_type 1 日排行榜  2周排行榜
-     * @param $page      页码
+     *默认 返回所有分类
+     * @param $day_type   1 日排行榜  2周排行榜
+     * @param $page       页码
      * @return string
      */
     public function get_other($day_type = '')
@@ -300,6 +300,11 @@ class Api extends MY_Controller
         echo json_encode($arr);
     }
 
+    /**
+     * 获取关键词接口
+     * @param $keyword  查询的关键词
+     * @param $page     查询的页码
+     */
     public function search(){
 
         $keyword = $_GET['keyword'];

@@ -63,18 +63,18 @@
       <file leaf-file-name="Api.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43730888">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.29357797">
+              <caret line="305" column="29" selection-start-line="305" selection-start-column="29" selection-end-line="305" selection-end-column="29" />
               <folding>
-                <marker date="1498119531718" expanded="true" signature="658:884" placeholder="select a.id,... tx_news" />
-                <marker date="1498119531718" expanded="true" signature="904:1061" placeholder="select count... tx_news" />
-                <marker date="1498119531718" expanded="true" signature="1888:1934" placeholder="update tx_ne... " />
-                <marker date="1498119531718" expanded="true" signature="1888:1935" placeholder="update tx_ne... " />
-                <marker date="1498119531718" expanded="true" signature="7970:8063" placeholder="select count... tx_news" />
-                <marker date="1498119531718" expanded="true" signature="8104:8216" placeholder="select count... tx_news" />
-                <marker date="1498119531718" expanded="true" signature="8898:8943" placeholder="select count... tx_news_type" />
-                <marker date="1498119531718" expanded="true" signature="9081:9145" placeholder="select id, n... tx_news_type" />
-                <marker date="1498119531718" expanded="true" signature="9866:9892" placeholder="..." />
+                <marker date="1498121985406" expanded="true" signature="663:889" placeholder="select a.id,... tx_news" />
+                <marker date="1498121985406" expanded="true" signature="909:1066" placeholder="select count... tx_news" />
+                <marker date="1498121985406" expanded="true" signature="1893:1939" placeholder="update tx_ne... " />
+                <marker date="1498121985406" expanded="true" signature="1893:1940" placeholder="update tx_ne... " />
+                <marker date="1498121985406" expanded="true" signature="7991:8084" placeholder="select count... tx_news" />
+                <marker date="1498121985406" expanded="true" signature="8125:8237" placeholder="select count... tx_news" />
+                <marker date="1498121985406" expanded="true" signature="8919:8964" placeholder="select count... tx_news_type" />
+                <marker date="1498121985406" expanded="true" signature="9102:9166" placeholder="select id, n... tx_news_type" />
+                <marker date="1498121985406" expanded="true" signature="9979:10005" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -971,18 +971,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43730888">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.29357797">
+          <caret line="305" column="29" selection-start-line="305" selection-start-column="29" selection-end-line="305" selection-end-column="29" />
           <folding>
-            <marker date="1498119531718" expanded="true" signature="658:884" placeholder="select a.id,... tx_news" />
-            <marker date="1498119531718" expanded="true" signature="904:1061" placeholder="select count... tx_news" />
-            <marker date="1498119531718" expanded="true" signature="1888:1934" placeholder="update tx_ne... " />
-            <marker date="1498119531718" expanded="true" signature="1888:1935" placeholder="update tx_ne... " />
-            <marker date="1498119531718" expanded="true" signature="7970:8063" placeholder="select count... tx_news" />
-            <marker date="1498119531718" expanded="true" signature="8104:8216" placeholder="select count... tx_news" />
-            <marker date="1498119531718" expanded="true" signature="8898:8943" placeholder="select count... tx_news_type" />
-            <marker date="1498119531718" expanded="true" signature="9081:9145" placeholder="select id, n... tx_news_type" />
-            <marker date="1498119531718" expanded="true" signature="9866:9892" placeholder="..." />
+            <marker date="1498121985406" expanded="true" signature="663:889" placeholder="select a.id,... tx_news" />
+            <marker date="1498121985406" expanded="true" signature="909:1066" placeholder="select count... tx_news" />
+            <marker date="1498121985406" expanded="true" signature="1893:1939" placeholder="update tx_ne... " />
+            <marker date="1498121985406" expanded="true" signature="1893:1940" placeholder="update tx_ne... " />
+            <marker date="1498121985406" expanded="true" signature="7991:8084" placeholder="select count... tx_news" />
+            <marker date="1498121985406" expanded="true" signature="8125:8237" placeholder="select count... tx_news" />
+            <marker date="1498121985406" expanded="true" signature="8919:8964" placeholder="select count... tx_news_type" />
+            <marker date="1498121985406" expanded="true" signature="9102:9166" placeholder="select id, n... tx_news_type" />
+            <marker date="1498121985406" expanded="true" signature="9979:10005" placeholder="..." />
           </folding>
         </state>
       </provider>
