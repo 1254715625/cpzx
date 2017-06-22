@@ -175,7 +175,7 @@
 
                     </div>
                     <!-- 上传进度条及状态： -->
-                    <div class="progress">
+                    <div class="progress" style='height:40px'>
                         <div class="bar" style="width: 0%;"></div>
                         <div class="upstatus" style="margin-top:10px;"></div>
                     </div>
@@ -322,7 +322,9 @@
         autoFloatEnabled: true
     });
     ue.ready(function() {
-        //ue.setContent('<?php echo $content;?>');
+
+        ue.setContent('<?php echo $info['article']?>');
+
     });
 
 

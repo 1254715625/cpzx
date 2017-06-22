@@ -259,7 +259,7 @@ class Data_model extends CI_Model
     //改造版图集信息
     function get_allimg_new($page){
 
-        $query = $this->db->query( "select * from tx_img where status != 2 order by addtime desc limit ".(($page-1)*10).",10");
+        $query = $this->db->query( "select * from tx_img where status != 2 order by addtime desc limit ".(($page-1)*9).",9");
         $data['data'] = $query->result_array();
         return $data;
     }
