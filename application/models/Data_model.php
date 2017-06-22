@@ -21,13 +21,48 @@ class Data_model extends CI_Model
     }
 
     //获取热门标签
-    public function get_newtag(){
-
-        $query = $this->db->query('select * from tx_news_tag order by click desc limit 5');
+    public function get_newtag($page='',$size=''){
+        if($page == '' || $size==''){
+            $page=$_GET['page']?$_GET['page']:1;
+            $size=$_GET['size']?$_GET['size']:5;
+        }
+        $query = $this->db->query('select * from tx_news_tag order by click desc limit '.(($page-1)*$size).",".$size);
         $tag = $query->result_array();
 
         return em($tag);
     }
+
+    //后台获取标签
+
+    public function admin_get_newtag($page='',$size=''){
+        if($page == '' || $size==''){
+            $page=$_GET['page']?$_GET['page']:1;
+            $size=$_GET['size']?$_GET['size']:10;
+        }
+
+        $query = $this->db->query( "select count(*) as dd from tx_news_tag");
+        $data['num'] = $query->result_array()[0]['dd'];
+
+
+        $query = $this->db->query('select * from tx_news_tag order by id asc limit '.(($page-1)*$size).",".$size);
+        $data['data'] = $query->result_array();
+
+
+        return em($data);
+    }
+
+ /*   //获取友情链接
+    public function get_f_link1($page){
+        $query = $this->db->query( "select count(*) as dd from tx_f_link");
+        $data['num'] = $query->result_array()[0]['dd'];
+
+        $query = $this->db->query("select * from tx_f_link order by sort asc limit ".(($page-1)*6).",6");
+        $data['data'] = $query->result_array();
+
+        return em($data);
+    }*/
+
+
 
     //获取新闻信息
     public function get_new($id=''){

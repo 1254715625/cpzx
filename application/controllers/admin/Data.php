@@ -20,7 +20,7 @@ class Data extends Admin_Controller {
 
 		if($num['dd'] <=0)showmsg($this->data['url_dir'].'/admin/home/pass','原密码错误！');
 
-		$this->db->query("update tx_admin set password = '".md5($newpassword1)."' where id = ".$id."");
+		$this->db->query("update tx_admin set password = '".md5($newpassword1)."' where id = ".$id." ");
 
 		showmsg($this->data['url_dir'].'/admin/home/pass','修改成功！');
 
@@ -63,9 +63,9 @@ class Data extends Admin_Controller {
         //作者信息
         $aid = $_SESSION['adminid'];
 
-        if($_POST['type'] == 1){
-            $aid=$_POST['author'];
-        }
+		if($_POST['author']){
+			$aid=$_POST['author'];
+		}
 
 		$id = $_POST['id'];
 		$title = $_POST['title'];
@@ -457,7 +457,17 @@ function image_create_from_ext($imgfile)
 				}else{
 					showmsg($_SERVER['HTTP_REFERER'],'删除失败');
 				}
-			}else if($type=='column'){
+			}elseif($type == 'news_tag'){
+
+                $data = $this->data_model->del_index('tx_news_tag','id = '.$id);
+
+                if($data){
+                    showmsg($_SERVER['HTTP_REFERER'],'删除成功');
+                }else{
+                    showmsg($_SERVER['HTTP_REFERER'],'删除失败');
+                }
+
+            }else if($type=='column'){
 				$data = $this->data_model->del_index('tx_news_type','id = '.$id);
 				if($data){
 					$re=$this->db->query("SELECT id FROM `tx_news` WHERE `typeid`='{$id}'");

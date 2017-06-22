@@ -187,6 +187,23 @@ class Home extends Admin_Controller {
 		$this->data['f_link'] = $f_link['data'];
 		$this->loadview('admin/f_link.php',$this->data);
 	}
+
+    //标签管理
+    public function tag(){
+        $page = $_GET['page']?$_GET['page']:1;
+        $size=$_GET['size']?$_GET['size'] :10;
+        $getdata = $this->data_model;
+        $tag= $getdata->admin_get_newtag($page);
+
+        $url = $this->data['url_dir'].'/admin/home/tag?';
+        $fenye = fenye($page,$size,$tag['num'],$url);
+        $this->data['fenye'] = $fenye;
+        $this->data['tag'] = $tag['data'];
+
+        $this->loadview('admin/tag.php',$this->data);
+
+
+    }
 }
 
 

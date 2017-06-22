@@ -41,6 +41,7 @@
             <li><a href="<?php echo $url_dir;?>/admin/home/adv" target="right"><span class="icon-caret-right"></span>首页轮播</a></li>
 			<li><a href="<?php echo $url_dir;?>/admin/home/ad" target="right"><span class="icon-caret-right"></span>广告管理</a></li>
             <li><a href="<?php echo $url_dir;?>/admin/home/f_link" target="right"><span class="icon-caret-right"></span>链接管理</a></li>
+            <li><a href="<?php echo $url_dir;?>/admin/home/tag" target="right"><span class="icon-caret-right"></span>标签管理</a></li>
         </ul>
     </div>
     <script type="text/javascript">
