@@ -54,6 +54,7 @@
             <th>图片</th>
             <th>名称</th>
             <th>分类名称</th>
+            <th>作者</th>
             <th width="10%">更新时间</th>
             <th width="310">操作</th>
         </tr>
@@ -67,6 +68,7 @@
                     </td>
                     <td><a target="_blank"  href="<?php echo $url_dir.'/news/content/'.$val['id']; ?>"><?php echo $val['title']; ?></a></td>
                     <td><?php echo $val['name']; ?></td>
+                    <td><?php echo $val['author']; ?></td>
                     <td><?php echo $val['newstime']; ?></td>
                     <td>
                         <div class="button-group"><a class="button border-main"

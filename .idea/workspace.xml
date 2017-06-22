@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60bff7ee-d669-4c9d-ae6a-939db997a39c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/News.php" afterPath="$PROJECT_DIR$/application/controllers/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Data_model.php" afterPath="$PROJECT_DIR$/application/models/Data_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/addnew.php" afterPath="$PROJECT_DIR$/application/views/admin/addnew.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Api.php" afterPath="$PROJECT_DIR$/application/controllers/Api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/content_manage.php" afterPath="$PROJECT_DIR$/application/views/admin/content_manage.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,13 +35,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="News.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7076023">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state vertical-scroll-proportion="-22.709677">
+              <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
               <folding>
                 <marker date="1498113079017" expanded="true" signature="967:1003" placeholder="select count... tx_img" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_manage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/content_manage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-39.741936">
+              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Api.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12865497">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="64" />
+              <folding>
+                <marker date="1498115018685" expanded="true" signature="658:884" placeholder="select a.id,... tx_news" />
+                <marker date="1498115018685" expanded="true" signature="904:1061" placeholder="select count... tx_news" />
+                <marker date="1498115018685" expanded="true" signature="7885:7978" placeholder="select count... tx_news" />
+                <marker date="1498115018685" expanded="true" signature="8019:8131" placeholder="select count... tx_news" />
+                <marker date="1498115018685" expanded="true" signature="8813:8858" placeholder="select count... tx_news_type" />
+                <marker date="1498115018685" expanded="true" signature="8996:9060" placeholder="select id, n... tx_news_type" />
+                <marker date="1498115018685" expanded="true" signature="9781:9807" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Data_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Data_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.5737705">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="35" />
+              <folding>
+                <marker date="1498113081357" expanded="true" signature="401:424" placeholder="select * fro... tx_config" />
+                <marker date="1498113081357" expanded="true" signature="585:638" placeholder="select * fro... tx_news_tag" />
+                <marker date="1498113081357" expanded="true" signature="870:892" placeholder="select * fro... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="1071:1117" placeholder="select conte... tx_news_content" />
+                <marker date="1498113081357" expanded="true" signature="1314:1360" placeholder="select conte... tx_news_content" />
+                <marker date="1498113081357" expanded="true" signature="1899:1920" placeholder="select * fro... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="2099:2144" placeholder="select conte... tx_img_content" />
+                <marker date="1498113081357" expanded="true" signature="2406:2433" placeholder="select * fro... tx_news_type" />
+                <marker date="1498113081357" expanded="true" signature="2671:2691" placeholder="select * fro... tx_ad" />
+                <marker date="1498113081357" expanded="true" signature="2940:2969" placeholder="select * fro... tx_news_status" />
+                <marker date="1498113081357" expanded="true" signature="3144:3275" placeholder="select tn.*,... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="3895:3939" placeholder="select count... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="4044:4195" placeholder="select tn.*,... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="5544:5584" placeholder="select count... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="5689:5774" placeholder="select * fro... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="5962:5984" placeholder="select * fro... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="6147:6206" placeholder="select * fro... tx_news_type" />
+                <marker date="1498113081357" expanded="true" signature="6361:6421" placeholder="select * fro... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="6582:6667" placeholder="select * fro... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="6582:6668" placeholder="select * fro... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="6861:7035" placeholder="select tn.*,... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="7399:7441" placeholder="select count... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="7546:7666" placeholder="select id,ti... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="7836:7915" placeholder="select id,ti... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="8011:8070" placeholder="select conte... tx_news_content" />
+                <marker date="1498113081357" expanded="true" signature="8261:8315" placeholder="select * fro... tx_vote" />
+                <marker date="1498113081357" expanded="true" signature="8471:8510" placeholder="select * fro... tx_vote" />
+                <marker date="1498113081357" expanded="true" signature="8678:8809" placeholder="select id,ti... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="8900:9031" placeholder="select id,ti... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="9204:9315" placeholder="select id,ti... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="9406:9517" placeholder="select id,ti... tx_img" />
+                <marker date="1498113081357" expanded="true" signature="10062:10103" placeholder="select count... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="10275:10360" placeholder="select * fro... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="10541:10577" placeholder="select count... tx_f_link" />
+                <marker date="1498113081357" expanded="true" signature="10681:10748" placeholder="select * fro... tx_f_link" />
+                <marker date="1498113081357" expanded="true" signature="10915:10956" placeholder="select * fro... tx_f_link" />
+                <marker date="1498113081357" expanded="true" signature="11181:11205" placeholder="select * fro... tx_f_link" />
+                <marker date="1498113081357" expanded="true" signature="11459:11527" placeholder="select count... tx_news_tag" />
+                <marker date="1498113081357" expanded="true" signature="13046:13088" placeholder="select typei... tx_news" />
+                <marker date="1498113081357" expanded="true" signature="13221:13267" placeholder="UPDATE tx_ne... " />
+                <marker date="1498113081357" expanded="true" signature="13383:13448" placeholder="UPDATE tx_ne... " />
+                <marker date="1498113081357" expanded="true" signature="15144:15172" placeholder="delete from " />
               </folding>
             </state>
           </provider>
@@ -57,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/public/main/css/layout.css" />
         <option value="$PROJECT_DIR$/assets/public/main/js/user.js" />
         <option value="$PROJECT_DIR$/application/controllers/Welcome.php" />
         <option value="$PROJECT_DIR$/application/models/admin_user_model.php" />
@@ -102,12 +180,13 @@
         <option value="$PROJECT_DIR$/application/controllers/admin/Data.php" />
         <option value="$PROJECT_DIR$/application/views/list.php" />
         <option value="$PROJECT_DIR$/application/views/listdetails.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Api.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Home.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addnew.php" />
         <option value="$PROJECT_DIR$/assec/public/css/index.css" />
         <option value="$PROJECT_DIR$/application/controllers/News.php" />
         <option value="$PROJECT_DIR$/application/models/Data_model.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/content_manage.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Api.php" />
       </list>
     </option>
   </component>
@@ -194,46 +273,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cpzx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cpzx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cpzx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cpzx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -270,6 +309,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpzx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpzx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -289,28 +350,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cpzx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cpzx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -670,6 +709,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-60.985855">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493195070000" expanded="true" signature="32151:32236" placeholder="INSERT INTO ${$table}... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -687,13 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/content_manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.031117398">
-          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6200294">
@@ -705,6 +740,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5912306">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="155" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -712,6 +748,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42276424">
           <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -733,22 +770,6 @@
         <state vertical-scroll-proportion="0.71258503">
           <caret line="177" column="76" selection-start-line="177" selection-start-column="75" selection-end-line="177" selection-end-column="76" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19298245">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <marker date="1498111446690" expanded="true" signature="658:874" placeholder="select a.id,... tx_news" />
-            <marker date="1498111446690" expanded="true" signature="894:1051" placeholder="select count... tx_news" />
-            <marker date="1498111446690" expanded="true" signature="7875:7968" placeholder="select count... tx_news" />
-            <marker date="1498111446690" expanded="true" signature="8009:8121" placeholder="select count... tx_news" />
-            <marker date="1498111446690" expanded="true" signature="8803:8848" placeholder="select count... tx_news_type" />
-            <marker date="1498111446690" expanded="true" signature="8986:9050" placeholder="select id, n... tx_news_type" />
-            <marker date="1498111446690" expanded="true" signature="9771:9797" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,10 +866,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.709677">
+          <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
+          <folding>
+            <marker date="1498113079017" expanded="true" signature="967:1003" placeholder="select count... tx_img" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Data_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.470948">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state vertical-scroll-proportion="-3.5737705">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="35" />
           <folding>
             <marker date="1498113081357" expanded="true" signature="401:424" placeholder="select * fro... tx_config" />
             <marker date="1498113081357" expanded="true" signature="585:638" placeholder="select * fro... tx_news_tag" />
@@ -896,12 +927,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/content_manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7076023">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state vertical-scroll-proportion="-39.741936">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12865497">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="64" />
           <folding>
-            <marker date="1498113079017" expanded="true" signature="967:1003" placeholder="select count... tx_img" />
+            <marker date="1498115018685" expanded="true" signature="658:884" placeholder="select a.id,... tx_news" />
+            <marker date="1498115018685" expanded="true" signature="904:1061" placeholder="select count... tx_news" />
+            <marker date="1498115018685" expanded="true" signature="7885:7978" placeholder="select count... tx_news" />
+            <marker date="1498115018685" expanded="true" signature="8019:8131" placeholder="select count... tx_news" />
+            <marker date="1498115018685" expanded="true" signature="8813:8858" placeholder="select count... tx_news_type" />
+            <marker date="1498115018685" expanded="true" signature="8996:9060" placeholder="select id, n... tx_news_type" />
+            <marker date="1498115018685" expanded="true" signature="9781:9807" placeholder="..." />
           </folding>
         </state>
       </provider>
