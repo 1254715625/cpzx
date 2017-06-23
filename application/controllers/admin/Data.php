@@ -356,7 +356,13 @@ function image_create_from_ext($imgfile)
 		$info = $_POST['info'];
 		$status = $_POST['status'];
 
-		$getdata = $this->data_model;
+		if($_FILES['picture']['name']){
+			$picture = ImageUpload($_FILES['picture'],'a/'.date('ymd'));
+		}else{
+			$picture=$_POST['sslogo'];
+		}
+
+        $getdata = $this->data_model;
 
 		if(!$name||!is_numeric($sort)||!is_numeric($status)||!$key||!$info)showmsg($_SERVER['HTTP_REFERER'],'信息不能为空！');
 
@@ -366,6 +372,7 @@ function image_create_from_ext($imgfile)
 			'sort' => $sort,
 			'key' => $key,
 			'info' => $info,
+			'picture'=>$picture,
 			'status' => $status,
 		);
 

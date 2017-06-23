@@ -282,10 +282,10 @@ class Api extends MY_Controller
             );
         } else {
 
-            $listnum = $this->db->query("select count(*) as total   from  tx_news_type ");
+            $listnum = $this->db->query("select count(*) as total   from  tx_news_type where   status = 0 ");
             $num = $listnum->result_array()[0]['total'];
             $total=ceil($num/$size);
-            $query = $this->db->query("select id, name from  tx_news_type limit " .(($page-1)*$size).",".$size);
+            $query = $this->db->query("select id, name,picture from  tx_news_type where   status = 0 order by sort asc  limit " .(($page-1)*$size).",".$size);
             $result = $query->result_array();
             $arr = array(
                 'status' => 1,

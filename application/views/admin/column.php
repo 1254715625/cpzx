@@ -37,7 +37,7 @@
 <div class="panel admin-panel margin-top">
     <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加/修改 栏目</strong></div>
     <div class="body-content">
-        <form method="post" class="form-x" action="<?php echo $url_dir; ?>/admin/data/type">
+        <form method="post" class="form-x" action="<?php echo $url_dir; ?>/admin/data/type" enctype="multipart/form-data">
             <input type="hidden" name="id" value=""/>
             <div class="form-group">
                 <div class="label">
@@ -80,6 +80,18 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <div class="label">
+                    <label>图片：</label>
+                </div>
+                <div style="float: none;" class="field">
+                    <input type="text" id="url1" name="sslogo"  class="input tips" style="width:25%; float:left;"  value="<?php echo $type['picture'];?>" data-toggle="hover" data-place="right" data-image="<?php echo $url_dir.$type['picture'];?>"  />
+                    <input type="file" name="picture" class="button bg-blue margin-left" id="image1" value="游览" >
+                </div>
+            </div>
+            <script>
+
+            </script>
             <div class="form-group">
                 <div class="label">
                     <label>显示：</label>
@@ -128,6 +140,25 @@
     </div>
 </div>
 <script>
-    amcolum.get_lanmu();
+    $('.border-main').click(function(){
+
+        var id = $(this).attr('data');
+
+        $.get(web_url + '/admin/data/columninfo?id='+id,function(r){
+            if(r != 1){
+                console.log(r);
+                var data = eval(r);
+                $('input[name="id"]').val(data[0]['id']);
+                $('input[name="name"]').val(data[0]['name']);
+                $('input[name="sort"]').val(data[0]['sort']);
+                $('input[name="key"]').val(data[0]['key']);
+                $('input[name="info"]').val(data[0]['info']);
+                $('input[name="sslogo"]').val(data[0]['picture']);
+                $('.active').removeClass('active');
+                $('input[name="status"]:eq('+(data[0]['status'])+')').parents('label').addClass('active');
+                $('input[name="status"]:eq('+(data[0]['status'])+')').prop('checked',true);
+            }
+        })
+    })
 
 </script>
