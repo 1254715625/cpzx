@@ -19,16 +19,29 @@
 
 <body>
 <!--navB-->
+
 <div class="contentBox">
     <div class="mainwd2">
         <div class="navBox"> <a class="logo left" href="<?php echo site_url('Home/index');?>"><img src="<?php echo $url_dir.$webinfo['web_logo']; ?>"></a>
             <div class="nav right">
                 <ul>
                     <li class="<?php echo !$typeid?'currentnav':''?>"><a href="<?php echo site_url('Home/index');?>">首页</a></li>
-                    <?php foreach($type as $val){ ?>
-                        <li <?php echo ($val['id']==$typeid)?'class="currentnav"':'';?>><a  href='<?php echo site_url("news/index/{$val['id']}");?>'><?php echo $val['name']; ?></a></li> 
+                    <?php foreach($type as $val){
+                            if($val['id'] !=9){
+                                ?>
+                                <li <?php echo ($val['id']==$typeid)?'class="currentnav"':'';?>><a  href='<?php echo site_url("news/index/{$val['id']}");?>'><?php echo $val['name']; ?></a></li>
 
-                    <?php } ;?>
+                                <?php
+                            }
+                        } ;?>
+
+
+                    <?php /*foreach($type as $val){ */?><!--
+                        <li <?php /*echo ($val['id']==$typeid)?'class="currentnav"':'';*/?>><a  href='<?php /*echo site_url("news/index/{$val['id']}");*/?>'><?php /*echo $val['name']; */?></a></li>
+
+                    --><?php /*} ;*/?>
+
+
                     <li> <a href="/news/meinv">美女图集</a></li>
                 </ul>
             </div>

@@ -67,11 +67,14 @@
                 <div class="field">
                     <select name="type" class="dinput">
                         <?php foreach ($type as $val) {
-                            if ($val['id'] == $info['typeid']) {
-                                echo '<option selected="selected" value="' . $val['id'] . '">' . $val['name'] . '</option>';
-                            } else {
-                                echo '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
+                            if($val['id'] != 9){
+                                if ($val['id'] == $info['typeid']) {
+                                    echo '<option selected="selected" value="' . $val['id'] . '">' . $val['name'] . '</option>';
+                                } else {
+                                    echo '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
+                                }
                             }
+
                         } ?>
                     </select>
                     <div class="tips"></div>

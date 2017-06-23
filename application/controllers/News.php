@@ -31,8 +31,7 @@
             $query=$this->db->query("select count(*) as total from tx_img ");
 			$news=$this->data_model->get_allimg_new($page);
             $num = $query->result_array()[0]['total'];
-            $total = ceil($num / $page);
-            $fenye = qfenye($page,9,$total,$this->data['url_dir'].'/News/meinv');
+            $fenye = qfenye($page,9,$num,$this->data['url_dir'].'/News/meinv');
             $this->data['news'] = $news['data'];
             $this->data['fenye'] = $fenye;
 

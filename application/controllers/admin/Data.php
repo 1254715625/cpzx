@@ -475,6 +475,9 @@ function image_create_from_ext($imgfile)
                 }
 
             }else if($type=='column'){
+                if($id == 9){
+                    showmsg($_SERVER['HTTP_REFERER'],'禁止删除本栏目');die;
+                }
 				$data = $this->data_model->del_index('tx_news_type','id = '.$id);
 				if($data){
 					$re=$this->db->query("SELECT id FROM `tx_news` WHERE `typeid`='{$id}'");
