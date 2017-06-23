@@ -325,23 +325,24 @@ class Api extends MY_Controller
 
         $news=$this->data_model->get_search($keyword,$page,'search');
 
-        foreach($news['data'] as $key=>$val){
-            $news['data'][$key]['title'] = str_replace($keyword,'<span style="color:red;font-weight:900;">'.$keyword.'</span>',$val['title']);
+        if($news['data']){
+
+            foreach($news['data'] as $key=>$val){
+                $news['data'][$key]['title'] = str_replace($keyword,'<span style="color:red;font-weight:900;">'.$keyword.'</span>',$val['title']);
+            }
+
+            // $fenye = sfenye($page,10,$news['num'],$this->data['url_dir'].'/search/index?keyword='.$keyword);
+            // $this->da['status']=1;
+            // $this->da['result'] = $news['data'];
+
+            $arr = array(
+                'status' => 1,
+                'msg' => '返回成功',
+                'num'=>$news['num'],
+                'total'=>$news['total'],
+                'res' =>$news['data']
+            );
         }
-
-       // $fenye = sfenye($page,10,$news['num'],$this->data['url_dir'].'/search/index?keyword='.$keyword);
-       // $this->da['status']=1;
-       // $this->da['result'] = $news['data'];
-
-        $arr = array(
-            'status' => 1,
-            'msg' => '返回成功',
-            'num'=>$news['num'],
-            'total'=>$news['total'],
-            'res' =>$news['data']
-        );
-
-
 
         echo json_encode($arr);
     }
