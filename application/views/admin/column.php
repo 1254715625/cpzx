@@ -84,7 +84,7 @@
                 <div class="label">
                     <label>图片：</label>
                 </div>
-                <div style="float: none;" class="field">
+                <div style="float: none;" class="field"><?php echo $url_dir.$type['picture'];?>
                     <input type="text" id="url1" name="sslogo"  class="input tips" style="width:25%; float:left;"  value="<?php echo $type['picture'];?>" data-toggle="hover" data-place="right" data-image="<?php echo $url_dir.$type['picture'];?>"  />
                     <input type="file" name="picture" class="button bg-blue margin-left" id="image1" value="游览" >
                 </div>

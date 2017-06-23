@@ -63,18 +63,20 @@ class Api extends MY_Controller
             $total=1;
             $query = $this->db->query($sql . " and a.id =" . $id . " ");
             $results = $query->result_array();
-            $rand = rand(1, 6);
-            $secord = $this->db->query($sql . " and b.id =" . $rand . " limit 0,3");
-            $addes = $secord->result_array();
-            foreach ($results as $key => $val) {
-                $results[$key]['vnum'] = $vnum;
-                $results[$key]['dnum'] = $dnum;
-            }
+            if($results){
+                $rand = rand(1, 6);
+                $secord = $this->db->query($sql . " and b.id =" . $rand . " limit 0,3");
+                $addes = $secord->result_array();
+                foreach ($results as $key => $val) {
+                    $results[$key]['vnum'] = $vnum;
+                    $results[$key]['dnum'] = $dnum;
+                }
 
-            $results = array(
-                'head' => $results,
-                'foot' => $addes
-            );
+                $results = array(
+                    'head' => $results,
+                    'foot' => $addes
+                );
+            }
 
         } else { //默认获取所有的新闻
             $query = $this->db->query($sql);
@@ -150,27 +152,30 @@ class Api extends MY_Controller
         } else {
             $getdata = $this->data_model;
             $info = $getdata->get_img($id);
-            $content = $getdata->get_imgcontent($id);
-            $prenext = $getdata->get_imgpn($id);
-            $this->da['info'] = $info;
-            $this->da['content'] = json_decode($content);
-            $this->da['pre'] = $prenext['pre'];
-            $this->da['next'] = $prenext['next'];
+            if($info){
+                $content = $getdata->get_imgcontent($id);
+                $prenext = $getdata->get_imgpn($id);
+                $this->da['info'] = $info;
+                $this->da['content'] = json_decode($content);
+                $this->da['pre'] = $prenext['pre'];
+                $this->da['next'] = $prenext['next'];
 
-            $a = array(
-                'info' => $info,
-                'content' => json_decode($content),
-                'pre' => $prenext['pre'],
-                'next' => $prenext['next'],
-            );
+                $a = array(
+                    'info' => $info,
+                    'content' => json_decode($content),
+                    'pre' => $prenext['pre'],
+                    'next' => $prenext['next'],
+                );
 
-            $arr = array(
-                'status' => 1,
-                'msg' => '返回成功',
-                'num'=>1,
-                'total'=>1,
-                'res' => $a,
-            );
+                $arr = array(
+                    'status' => 1,
+                    'msg' => '返回成功',
+                    'num'=>1,
+                    'total'=>1,
+                    'res' => $a,
+                );
+            }
+
 
         }
 
@@ -265,21 +270,26 @@ class Api extends MY_Controller
         $week_num = $countweek->result_array()[0]['total'];
 
         if ($day_type == 1) {
-            $arr = array(
-                'status' => 1,
-                'msg' => '返回成功',
-                'num'=>$day_num,
-                'total'=>ceil($day_num/$size),
-                'res' => $day
-            );
+            if($day){
+                $arr = array(
+                    'status' => 1,
+                    'msg' => '返回成功',
+                    'num'=>$day_num,
+                    'total'=>ceil($day_num/$size),
+                    'res' => $day
+                );
+            }
         } elseif ($day_type == 2) {
-            $arr = array(
-                'status' => 1,
-                'msg' => '返回成功',
-                'num'=>$week_num,
-                'total'=>ceil($week_num/$size),
-                'res' => $week
-            );
+            if($week){
+                $arr = array(
+                    'status' => 1,
+                    'msg' => '返回成功',
+                    'num'=>$week_num,
+                    'total'=>ceil($week_num/$size),
+                    'res' => $week
+                );
+            }
+
         } else {
 
             $listnum = $this->db->query("select count(*) as total   from  tx_news_type where   status = 0 ");
